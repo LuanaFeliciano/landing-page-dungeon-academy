@@ -1,47 +1,75 @@
 <template>
-  <q-page class="row items-center justify-evenly">
-    <example-component
-      title="Example component"
-      active
-      :todos="todos"
-      :meta="meta"
-    ></example-component>
-  </q-page>
+  <q-page-container>
+    <q-page class="q-pa-md flex">
+      <div class="landing-container text-center">
+        <!-- Logo -->
+        <div class="logo-container">
+          <img
+            src="/src/assets/logo.png"
+            alt="Dungeon Academy Logo"
+            class="logo"
+          />
+        </div>
+
+        <!-- Título -->
+        <h1 class="q-mt-lg text-h3 text-dark-blue">Dungeon Academy</h1>
+
+        <!-- Subtítulo Persuasivo -->
+        <h2 class="q-mt-md text-h5 text-dark-grey">Desafie sua mente e vença os monstros!</h2>
+
+        <!-- Descrição -->
+        <div class="description q-mt-md q-pa-md">
+          <p>
+            Dungeon Academy é um jogo educativo desenvolvido no GameMaker que
+            proporciona uma experiência de aprendizado única. Ao invés de lutar, você
+            deve responder a perguntas desafiadoras para derrotar monstros e
+            progredir na história. Prepare-se para testar seu conhecimento e
+            habilidades!
+          </p>
+        </div>
+
+        <!-- Prova Social -->
+        <div class="social-proof q-mt-md q-pa-md">
+          <h3 class="text-h6 text-dark-blue">O que nossos jogadores dizem:</h3>
+          <p class="quote">
+            "Dungeon Academy é incrível! Aprendi muito enquanto me divertia!"
+            <br/>- Maria, Estudante
+          </p>
+          <p class="quote">
+            "Um jogo desafiador que realmente estimula o cérebro!"
+            <br/>- João, Professor
+          </p>
+        </div>
+
+        <!-- Benefícios e Proposta de Valor -->
+        <div class="benefits q-mt-md q-pa-md">
+          <h3 class="text-h6 text-dark-blue">Benefícios:</h3>
+          <ul class="benefit-list">
+            <p>Desenvolva suas habilidades de raciocínio lógico.</p>
+            <p>Aprimore seu conhecimento em várias áreas.</p>
+            <p>Divirta-se enquanto aprende!</p>
+            <p>Ideal para instituições de ensino e aprendizado colaborativo.</p>
+          </ul>
+        </div>
+
+        <!-- Botão de Ação -->
+        <q-btn
+          class="q-mt-lg"
+          label="Jogar Agora"
+          color="dark-blue"
+          @Click="goToGithub"
+          :style="{ width: '100%', maxWidth: '200px' }"
+        />
+      </div>
+    </q-page>
+  </q-page-container>
+
 </template>
 
-<script setup lang="ts">
-import { ref } from 'vue';
-import { Todo, Meta } from 'components/models';
-import ExampleComponent from 'components/ExampleComponent.vue';
-
-defineOptions({
-  name: 'IndexPage'
-});
-
-const todos = ref<Todo[]>([
-  {
-    id: 1,
-    content: 'ct1'
-  },
-  {
-    id: 2,
-    content: 'ct2'
-  },
-  {
-    id: 3,
-    content: 'ct3'
-  },
-  {
-    id: 4,
-    content: 'ct4'
-  },
-  {
-    id: 5,
-    content: 'ct5'
-  }
-]);
-
-const meta = ref<Meta>({
-  totalCount: 1200
-});
+<script setup>
+function goToGithub() {
+  window.open('https://github.com/LuanaFeliciano/DungeonAcademy', '_blank');
+}
 </script>
+
+
