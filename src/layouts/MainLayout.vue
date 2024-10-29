@@ -11,13 +11,13 @@
       <router-view /> <!-- Aqui as páginas como IndexPage serão renderizadas -->
     </q-page-container>
     <q-footer class="bg-dark-blue text-white q-pb-sm q-mt-xs">
-      <div class="q-mt-xs text-center text-caption">
-        <p>© 2024 Dungeon Academy. Todos os direitos reservados.</p>
+      <div class="text-dark q-mt-xs text-center text-caption">
+        <p class="text-dark">© 2024 Dungeon Academy. Todos os direitos reservados.</p>
         <p>
-          <a href="#" class="text-white ">Política de Privacidade</a> |
-          <a href="#" class="text-white ">Termos de Uso</a>
+          <a href="#" class="text-dark ">Política de Privacidade</a> |
+          <a href="#" class="text-dark ">Termos de Uso</a>
         </p>
-        <p>Contato: <a href="mailto:contato@dungeonacademy.com" class="text-white">contato@dungeonacademy.com</a></p>
+        <p>Contato: <a href="mailto:contato@dungeonacademy.com" class="text-dark">contato@dungeonacademy.com</a></p>
       </div>
     </q-footer>
   </q-layout>
@@ -42,7 +42,7 @@ function goContact() {
 <style scoped>
 
 .bg-light-grey {
-  background-color: #f0f4f8;
+  background-color: transparent;
 }
 
 .bg-dark-blue {
@@ -50,11 +50,12 @@ function goContact() {
 }
 
 .text-dark-blue {
-  color: #002e6d;
+  color: #002e6d ;
 }
 
-.text-dark-grey {
-  color: #4a4a4a;
+
+.text-dark {
+  color: #000 !important; /* Cor preta */
 }
 
 .landing-container {
@@ -82,7 +83,7 @@ function goContact() {
 }
 
 .description, .social-proof, .benefits {
-  background-color: #f5f5f5;
+  background-color: transparent;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   padding: 15px;
@@ -90,26 +91,36 @@ function goContact() {
 
 .quote {
   font-style: italic;
-  color: #555;
+  color: black;
 }
 
 .benefit-list {
   list-style-type: disc;
   padding-left: 20px;
+
 }
 
 .q-btn {
-  background-color:  #171421;
+  background-color:  #4262a5;
   color: #fff;
 }
 
-.q-footer {
+.q-footer .text-dark{
   background-color: #4262a5;
+  color:#000 !important;
 }
 
 @media (max-width: 600px) {
   .landing-container {
     padding: 10px;
   }
+}
+
+.q-layout {
+  background-image: url("/src/assets/dungeon.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 </style>
