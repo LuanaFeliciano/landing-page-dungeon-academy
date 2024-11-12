@@ -4,20 +4,33 @@
       <q-toolbar>
         <q-toolbar-title class="text-h5">Dungeon Academy</q-toolbar-title>
         <q-btn flat label="Início" @click="goHome" class="q-ml-sm text-white" />
-        <q-btn flat label="Contato" @click="goContact" class="q-ml-sm text-white" />
+        <q-btn
+          flat
+          label="Contato"
+          @click="goContact"
+          class="q-ml-sm text-white"
+        />
       </q-toolbar>
     </q-header>
     <q-page-container>
-      <router-view /> <!-- Aqui as páginas como IndexPage serão renderizadas -->
+      <router-view />
+      <!-- Aqui as páginas como IndexPage serão renderizadas -->
     </q-page-container>
-    <q-footer class="bg-dark-blue text-white q-pb-sm q-mt-xs">
+    <q-footer class="bg-dark-blue q-pb-xs q-mt-sm">
       <div class="text-dark q-mt-xs text-center text-caption">
-        <p class="text-dark">© 2024 Dungeon Academy. Todos os direitos reservados.</p>
-        <p>
-          <a href="#" class="text-dark ">Política de Privacidade</a> |
-          <a href="#" class="text-dark ">Termos de Uso</a>
+        <p class="text-dark">
+          © 2024 Dungeon Academy. Todos os direitos reservados.
         </p>
-        <p>Contato: <a href="mailto:contato@dungeonacademy.com" class="text-dark">contato@dungeonacademy.com</a></p>
+        <p>
+          <a href="#" class="text-dark">Política de Privacidade</a> |
+          <a href="#" class="text-dark">Termos de Uso</a>
+        </p>
+        <p>
+          Contato:
+          <a href="mailto:contato@dungeonacademy.com" class="text-dark"
+            >contato@dungeonacademy.com</a
+          >
+        </p>
       </div>
     </q-footer>
   </q-layout>
@@ -35,12 +48,9 @@ function goHome() {
 function goContact() {
   router.push('/contact');
 }
-
-
 </script>
 
 <style scoped>
-
 .bg-light-grey {
   background-color: transparent;
 }
@@ -50,9 +60,8 @@ function goContact() {
 }
 
 .text-dark-blue {
-  color: #002e6d ;
+  color: #002e6d;
 }
-
 
 .text-dark {
   color: #000 !important; /* Cor preta */
@@ -82,7 +91,9 @@ function goContact() {
   border-radius: 50%;
 }
 
-.description, .social-proof, .benefits {
+.description,
+.social-proof,
+.benefits {
   background-color: transparent;
   border-radius: 10px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
@@ -97,17 +108,16 @@ function goContact() {
 .benefit-list {
   list-style-type: disc;
   padding-left: 20px;
-
 }
 
 .q-btn {
-  background-color:  #4262a5;
+  background-color: #4262a5;
   color: #fff;
 }
 
-.q-footer .text-dark{
+.q-footer .text-dark {
   background-color: #4262a5;
-  color:#000 !important;
+  color: #000 !important;
 }
 
 @media (max-width: 600px) {
@@ -117,10 +127,22 @@ function goContact() {
 }
 
 .q-layout {
-  background-image: url("/src/assets/dungeon.png");
+  position: relative;
+  background-image: url('/src/assets/dungeon.png');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
+}
+
+.q-layout::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(63, 62, 62, 0.164);
+  z-index: 1;
 }
 </style>
