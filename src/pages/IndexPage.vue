@@ -1,6 +1,6 @@
 <template>
   <q-page-container>
-    <q-page class="q-pa-md flex">
+    <q-page class="q-pa-sm flex">
       <div class="landing-container text-center">
         <!-- Logo -->
         <div class="logo-container">
@@ -11,23 +11,52 @@
           />
         </div>
 
-        <!-- Título -->
-        <h1 class="q-mt-lg text-h3 text-dark">Dungeon Academy</h1>
-
-        <!-- Subtítulo Persuasivo -->
-        <h2 class="q-mt-md text-h5 text-dark">
+        <h2 class="q-mt-md text-h2 text-weight-bold">
           Desafie sua mente e vença os monstros!
         </h2>
 
-        <!-- Descrição -->
-        <div class="description q-mt-md q-pa-md">
-          <p style="color: black">
-            Dungeon Academy é um jogo educativo desenvolvido no GameMaker que
-            proporciona uma experiência de aprendizado única. Ao invés de lutar,
-            você deve responder a perguntas desafiadoras para derrotar monstros
-            e progredir na história. Prepare-se para testar seu conhecimento e
-            habilidades!
-          </p>
+        <div class="row description q-mt-lg q-pa-sm">
+          <div class="col-2 q-pl-lg">
+            <q-img
+              src="/src/assets/cheirado.png"
+              class="items-start"
+              style="height: 310px; width: 300px"
+            />
+          </div>
+          <div class="col-9 q-pa-lg">
+            <h4
+              class="q-pa-lg text-justify text-weight-medium"
+              style="color: black"
+            >
+              Dungeon Academy é um jogo educativo desenvolvido no GameMaker que
+              proporciona uma experiência de aprendizado única. Ao invés de
+              lutar, você deve responder a perguntas desafiadoras para derrotar
+              monstros e progredir na história. Prepare-se para testar seu
+              conhecimento e habilidades!
+            </h4>
+          </div>
+        </div>
+
+        <div class="row description q-mt-lg q-pa-sm">
+          <div class="col-9 q-pa-lg">
+            <h4
+              class="q-pa-lg text-justify text-weight-medium"
+              style="color: black"
+            >
+              Unindo elementos de jogos RPG, com a temática medieval e também
+              mesclando elementos modernos, Dungeon Academy tem como seu
+              principal foco alunos de ensino fundamental/médio, com o intuito
+              de despertar o conhecimento dos jogadores, além de garantir que o
+              aprendizado seja de forma leve e divertida.
+            </h4>
+          </div>
+          <div class="col-2">
+            <q-img
+              src="/src/assets/cheirado.png"
+              class="items-start"
+              style="height: 310px; width: 300px"
+            />
+          </div>
         </div>
 
         <!-- Prova Social -->
@@ -58,7 +87,6 @@
         <q-btn
           class="q-mt-lg"
           label="Jogar Agora"
-          color="dark-blue"
           @Click="goToGithub"
           :style="{ width: '100%', maxWidth: '200px' }"
         />
